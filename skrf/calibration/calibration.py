@@ -2769,7 +2769,7 @@ class NISTMultilineTRL(EightTerm):
             min_phi_eff = pi*npy.ones(lines)
             #Find the best common line to use
             for n in range(lines):
-                for k in range(n-1):
+                for k in range(lines):
                     dl = l[k] - l[n]
                     pd = abs(exp(-gamma_est*dl) - exp(gamma_est*dl))/2
                     if -1 <= pd <= 1:
